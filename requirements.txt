@@ -1,0 +1,9 @@
+mediapipe==0.10.14
+torch
+numpy
+Pillow
+matplotlib
+scikit-learn
+pandas
+seaborn
+opencv-python
