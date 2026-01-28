@@ -3,7 +3,6 @@
 Ce projet implemente un systeme de reconnaissance de l'alphabet (et les chiffres) de la Langue des Signes Americaine (ASL). L'approche repose sur l'extraction de points caracteristiques de la main (landmarks) pour alimenter un CNN et kNN.
 
 ![L'alphabet en ASL](assets/asl_alphabet.png)
-![Les chiffres en ASL](assets/asl_digits.png)
 
 ## Methodologie
 
@@ -17,9 +16,9 @@ Le pipeline de donnees utilise la bibliotheque Mediapipe pour transformer les im
 ![Superposition des landmarks sur une image du jeu de donées original](assets/processed_img_sample/I.jpg)
 
 3. **Modelisation** :
-    * **CNN (Convolutional Neural Network)** : Entraine sur les landmarks pre-traites. Ce modele offre des resultats satisfaisants (précision d'environ 85% sur le jeu de test) pour la classification de l'alphabet.
+    * **CNN (Convolutional Neural Network)** : Entraine sur les landmarks pre-traites. Ce modele offre des resultats satisfaisants (précision d'environ 85% sur le jeu de test) pour la classification de l'alphabet. Matrice de confusion du CNN:
       ![Matrice de confusion du CNN](assets/confusionMatrixCNN.png)
-    * **kNN (k-Nearest Neighbors)** : Ce modele presente une precision mediocre (précision d'environ 50% sur le jeu de test), confirmant que la classification de signes complexes necessite une approche plus profonde que le simple calcul de distance euclidienne entre points.
+    * **kNN (k-Nearest Neighbors)** : Ce modele presente une precision mediocre (précision d'environ 50% sur le jeu de test), confirmant que la classification de signes complexes necessite une approche plus profonde que le simple calcul de distance euclidienne entre points. Matrice de confusion du kNN:
       ![Matrice de confusion du kNN](assets/confusionMatrix_kNN.png)
 
 ## Gestion du Dataset
